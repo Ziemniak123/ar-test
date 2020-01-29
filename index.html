@@ -6,11 +6,13 @@
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
       <a-assets>
 	     <a-asset-item id="model-obj" src="./obj/Web&AR test.obj"></a-asset-item>
-	     <a-asset-item id="model-mtl" src="./obj/Web&AR test.mtl"></a-asset-item>      
+	     <a-asset-item id="model-mtl" src="./obj/Web&AR test.mtl"></a-asset-item>  
+	      <a-asset-item id="ground-obj" src="./obj/Web&AR test ground.obj"></a-asset-item>
+	     <a-asset-item id="ground-mtl" src="./obj/Web&AR test ground.mtl"></a-asset-item>  
        </a-assets>
        <a-marker type="barcode" value="0">
 	  <a-obj-model src="#model-obj" mtl="#model-mtl" scale="0.00333 0.00333 0.00333" material obj-model position="-0.2327004, 0, -0.019"></a-obj-model>
-          <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+          <a-obj-model src="#ground-obj" mtl="#ground-mtl" scale="0.00333 0.00333 0.00333" material obj-model position="-0.2327004, 0, -0.019"></a-obj-model>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
